@@ -1,0 +1,26 @@
+pivot_mode = "always"
+prompt = "starship prompt"
+skip_welcome_message = true
+startup = [
+  "alias yw = yarn workspace ",
+  "alias nr = npm run ",
+  "alias yw = yarn workspace ",
+  "def ns [] { open package.json | get scripts }",
+  "alias gs = git status -s ",
+  "alias gf = git fetch --all ",
+  "alias gp = git pull ",
+  "alias gfp = git fetch --all && git pull --ff-only",
+  "alias fff = git reset HEAD --hard ",
+  "def ghwhich [] { gh api repos/{owner}/{repo} | from json | get default_branch }",
+  "def gcm [] { gh api repos/{owner}/{repo} | from json | get default_branch | git checkout $in }",
+  "def what [port: int] { netstat -ano | lines | skip 4 | split column \" \" --collapse-empty Proto Local Foreign State PID | str trim | where Proto == \"TCP\" |  where Local =~ $\":($port)\" }",
+  "def \"tea time\" [] { gh workflow --repo jbolda/jacobbolda.com run build-and-deploy-on-production.yml }",
+  "alias notes = code 'C:\\Users\\Jacob\\Google Drive\\notes'",
+  "alias o = explorer .",
+  "alias w = curl wttr.in",
+  "alias cta = node 'C:\\Users\\Jacob\\Documents\\dev\\tauri\\tauri\\tooling\\create-tauri-app\\bin\\create-tauri-app.js'",
+  "alias c = node 'C:\\Users\\Jacob\\Documents\\dev\\covector\\packages\\covector\\bin\\covector.js'",
+  "alias c2 = node 'C:\\Users\\Jacob\\Documents\\dev\\covector2\\covector\\packages\\covector\\bin\\covector.js'",
+  "alias b = node 'C:\\Users\\Jacob\\Documents\\dev\\backstage\\backstage\\packages\\cli\\bin\\backstage-cli'",
+  "alias frontside = echo [[Person, Time]; [Jacob, US/Central] ['Taras/Min' America/Toronto] ['Elrick/Rae' US/Eastern]] | each { echo [[Person, Time]; [$it.Person $(date now | date to-timezone $it.Time | date format '%H %M')]] }",
+]
