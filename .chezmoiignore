@@ -1,0 +1,6 @@
+{{ if ne .chezmoi.os "darwin" }}
+Library/Application Support/org.nushell.nu/config.toml
+{{ end }}
+{{ if ne .chezmoi.os "windows" }}
+AppData/Roaming/nushell/nu/config/config.toml
+{{ end }}
