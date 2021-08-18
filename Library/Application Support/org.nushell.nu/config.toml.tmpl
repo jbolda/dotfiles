@@ -1,1 +1,10 @@
-{{- template "nushell-config.toml"  }}
+pivot_mode = "always"
+path = ["/usr/bin", "/bin", "/usr/sbin", "/sbin", "/opt/homebrew/bin"]
+prompt = "starship_prompt"
+skip_welcome_message = true
+startup = [
+  "mkdir ~/.cache/starship",
+  "starship init nu | save ~/.cache/starship/init.nu",
+  "source ~/.cache/starship/init.nu",
+{{- template "nushell-startup.toml.tmpl"  }}
+]
