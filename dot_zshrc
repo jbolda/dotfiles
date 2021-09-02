@@ -106,7 +106,6 @@ zplug "djui/alias-tips"
 # alias ohmyzsh="mate ~/.oh-my-zsh
 
 eval "$(starship init zsh)"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export GPG_TTY=$(tty)
 export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$VOLTA_HOME/bin:/opt/homebrew/bin:$PATH"

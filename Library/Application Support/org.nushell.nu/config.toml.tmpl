@@ -1,5 +1,5 @@
 pivot_mode = "always"
-path = ["$VOLTA_HOME/bin", "/usr/bin", "/bin", "/usr/sbin", "/sbin", "/opt/homebrew/bin"]
+path = ["{{ .chezmoi.homeDir }}/.volta/bin", "/opt/homebrew/bin", "/usr/local/bin", "/usr/bin", "/bin", "/usr/sbin", "/sbin"]
 prompt = "starship_prompt"
 skip_welcome_message = true
 startup = [
@@ -11,4 +11,4 @@ startup = [
 
 
 [env]
-VOLTA_HOME = "$HOME/.volta"
+VOLTA_HOME = "{{ .chezmoi.homeDir }}/.volta"
