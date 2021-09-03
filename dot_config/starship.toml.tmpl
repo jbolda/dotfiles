@@ -1,0 +1,50 @@
+scan_timeout = 10
+
+[directory]
+truncate_to_repo = false
+truncation_length = 60
+
+[directory.substitutions]
+{{- if (ne .chezmoi.os "windows") }}
+"~/Documents/dev/thefrontside/client" = "https://github.com"
+"~/Documents/dev" = "https://github.com"
+{{- end }}
+{{- if (ne .chezmoi.os "darwin") }}
+"~/Documents/dev/thefrontside/client" = "https://github.com"
+"~/Documents/dev" = "https://github.com"
+{{- end }}
+
+[package]
+format = "[$symbol$version]($style) "
+symbol = ""
+
+[nodejs]
+format = "using [$symbol$version]($style) "
+
+[battery]
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+full_symbol = "� "
+[[battery.display]]
+style = "bold red"
+threshold = 10
+
+[custom.nodeYarn]
+command = "yarn -v"
+files = ["yarn.lock"]
+symbol = "🧶"
+format = "[+ $symbol v$output]($style)"
+{{- if (eq .chezmoi.os "windows") }}
+shell = ["pwsh.exe", "-NoProfile", "-Command", "-"]
+{{- end }}
+style = "bold green"
+
+[custom.nodeNPM]
+command = "npm -v"
+files = ["package-lock.json"]
+symbol = ""
+format = "[+ $symbol v$output]($style)"
+{{- if (eq .chezmoi.os "windows") }}
+shell = ["pwsh.exe", "-NoProfile", "-Command", "-"]
+{{- end }}
+style = "bold green"
