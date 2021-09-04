@@ -5,13 +5,13 @@ truncate_to_repo = false
 truncation_length = 60
 
 [directory.substitutions]
-{{- if (ne .chezmoi.os "windows") }}
+{{- if (eq .chezmoi.os "windows") }}
 "~/Documents/dev/thefrontside/client" = "https://github.com"
 "~/Documents/dev" = "https://github.com"
 {{- end }}
-{{- if (ne .chezmoi.os "darwin") }}
-"~/Documents/dev/thefrontside/client" = "https://github.com"
-"~/Documents/dev" = "https://github.com"
+{{- if (eq .chezmoi.os "darwin") }}
+"~/dev/github/thefrontside/client" = "https://github.com"
+"~/dev/github" = "https://github.com"
 {{- end }}
 
 [package]
@@ -37,6 +37,9 @@ format = "[+ $symbol v$output]($style)"
 {{- if (eq .chezmoi.os "windows") }}
 shell = ["pwsh.exe", "-NoProfile", "-Command", "-"]
 {{- end }}
+{{- if (eq .chezmoi.os "darwin") }}
+shell = "zsh"
+{{- end }}
 style = "bold green"
 
 [custom.nodeNPM]
@@ -46,5 +49,8 @@ symbol = ""
 format = "[+ $symbol v$output]($style)"
 {{- if (eq .chezmoi.os "windows") }}
 shell = ["pwsh.exe", "-NoProfile", "-Command", "-"]
+{{- end }}
+{{- if (eq .chezmoi.os "darwin") }}
+shell = "zsh"
 {{- end }}
 style = "bold green"
