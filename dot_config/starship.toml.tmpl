@@ -35,7 +35,7 @@ files = ["yarn.lock"]
 symbol = "🧶"
 format = "[+ $symbol v$output]($style)"
 {{- if (eq .chezmoi.os "windows") }}
-shell = ["pwsh.exe", "-NoProfile", "-Command", "-"]
+shell = "C:/Program Files/git/usr/bin/bash.exe"
 {{- end }}
 {{- if (eq .chezmoi.os "darwin") }}
 shell = "zsh"
@@ -48,7 +48,7 @@ files = ["package-lock.json"]
 symbol = ""
 format = "[+ $symbol v$output]($style)"
 {{- if (eq .chezmoi.os "windows") }}
-shell = ["pwsh.exe", "-NoProfile", "-Command", "-"]
+shell = "C:/Program Files/git/usr/bin/bash.exe"
 {{- end }}
 {{- if (eq .chezmoi.os "darwin") }}
 shell = "zsh"
