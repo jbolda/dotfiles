@@ -6,7 +6,7 @@
   "alias gs = git status -s ",
   "alias gf = git fetch --all ",
   "alias gp = git pull ",
-  "alias gfp = git fetch --all && git pull --ff-only",
+  "alias gfp = (git fetch --all | autoview | git pull --ff-only)",
   "alias fff = git reset HEAD --hard ",
   "def ghwhich [] { gh api repos/{owner}/{repo} | from json | get default_branch }",
   "def gcm [] { gh api repos/{owner}/{repo} | from json | get default_branch | git checkout $in }",
