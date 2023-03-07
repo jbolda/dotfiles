@@ -42,8 +42,18 @@
         "unfocusedAppearance": {
           "background": "#010A1F",
           "backgroundImage": "C:\\Users\\Jacob\\Documents\\dev\\frontside\\frontside.com\\src\\img\\frontside-logo.png",
-          "backgroundImageOpacity": 0.10000000000000001
+          "backgroundImageOpacity": 0.1
         }
+      },
+      {
+        "colorScheme": "One Half Dark",
+        "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu-22.04",
+        "guid": "{46de2ee1-3865-4250-b1c3-adf53348031c}",
+        "hidden": false,
+        "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+        "name": "Ubuntu-22.04",
+        "startingDirectory": "\\\\wsl$\\Ubuntu-22.04\\home\\jbolda\\dev\\github\\",
+        "tabTitle": "Ubuntu 22"
       },
       {
         "colorScheme": "One Half Dark",
@@ -62,7 +72,7 @@
         "cursorShape": "bar",
         "font": {
           "face": "FiraCode NF",
-          "size": 12
+          "size": 12.0
         },
         "guid": "{00000000-0000-0000-ba54-000000000002}",
         "historySize": 9001,
@@ -74,10 +84,10 @@
         "tabTitle": "Git Bash"
       },
       {
-        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
         "hidden": false,
-        "name": "Azure Cloud Shell",
-        "source": "Windows.Terminal.Azure"
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore"
       },
       {
         "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -85,10 +95,10 @@
         "name": "cmd"
       },
       {
-        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
         "hidden": false,
-        "name": "PowerShell",
-        "source": "Windows.Terminal.PowershellCore"
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
       }
     ]
   },
@@ -324,6 +334,29 @@
       "yellow": "#C4A000"
     },
     {
+      "background": "#300A24",
+      "black": "#171421",
+      "blue": "#0037DA",
+      "brightBlack": "#767676",
+      "brightBlue": "#08458F",
+      "brightCyan": "#2C9FB3",
+      "brightGreen": "#26A269",
+      "brightPurple": "#A347BA",
+      "brightRed": "#C01C28",
+      "brightWhite": "#F2F2F2",
+      "brightYellow": "#A2734C",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#3A96DD",
+      "foreground": "#FFFFFF",
+      "green": "#26A269",
+      "name": "Ubuntu-22.04-ColorScheme",
+      "purple": "#881798",
+      "red": "#C21A23",
+      "selectionBackground": "#FFFFFF",
+      "white": "#CCCCCC",
+      "yellow": "#A2734C"
+    },
+    {
       "background": "#000000",
       "black": "#000000",
       "blue": "#000080",
@@ -346,5 +379,6 @@
       "white": "#C0C0C0",
       "yellow": "#808000"
     }
-  ]
+  ],
+  "themes": []
 }
