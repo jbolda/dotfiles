@@ -1,0 +1,4 @@
+{{- template "nushell-config.nu.tmpl" }}
+
+let-env PATH = ($env.PATH | split row (char esep) | prepend '{{ .chezmoi.homeDir }}/.volta/bin' | prepend '/home/linuxbrew/.linuxbrew/bin')
+let-env VOLTA_HOME = "{{ .chezmoi.homeDir }}/.volta"

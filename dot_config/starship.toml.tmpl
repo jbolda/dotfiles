@@ -10,7 +10,7 @@ truncation_length = 60
 "~/Documents/dev/thefrontside/client" = "https://github.com"
 "~/Documents/dev" = "https://github.com"
 {{- end }}
-{{- if (eq .chezmoi.os "darwin") }}
+{{- if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux") }}
 "~/dev/github/thefrontside/client" = "https://github.com"
 "~/dev/github" = "https://github.com"
 {{- end }}
