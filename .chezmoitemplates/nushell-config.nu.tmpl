@@ -19,10 +19,6 @@ let-env PROMPT_INDICATOR_VI_INSERT = ": "
 let-env PROMPT_INDICATOR_VI_NORMAL = "〉"
 let-env PROMPT_MULTILINE_INDICATOR = "::: "
 
-{{ if ne .chezmoi.os "windows" }}
-let-env VOLTA_HOME = "{{ .chezmoi.homeDir }}/.volta"
-{{ end }}
-
 # Set Alias
 alias yw = yarn workspace 
 alias nr = npm run 
@@ -33,12 +29,6 @@ alias gf = git fetch --all
 alias gp = git pull 
 alias fff = git reset HEAD --hard 
 alias w = curl wttr.in
-{{ if eq .chezmoi.os "windows" }}
-alias o = explorer .
-alias c = node 'C:\\Users\\Jacob\\Documents\\dev\\jbolda\\covector\\packages\\covector\\bin\\covector.js'
-alias c2 = node 'C:\\Users\\Jacob\\Documents\\dev\\covector2\\covector\\packages\\covector\\bin\\covector.js'
-alias b = node 'C:\\Users\\Jacob\\Documents\\dev\\backstage\\backstage\\packages\\cli\\bin\\backstage-cli'
-{{ end }}
 
 # commands
 def ns [] { open package.json | get scripts }

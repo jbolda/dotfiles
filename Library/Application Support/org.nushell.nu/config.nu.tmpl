@@ -1,3 +1,4 @@
 {{- template "nushell-startup.toml.tmpl"  }}
 
 let-env PATH = ($env.PATH | split row (char esep) | prepend '{{ .chezmoi.homeDir }}/.volta/bin' | prepend '/opt/homebrew/bin')
+let-env VOLTA_HOME = "{{ .chezmoi.homeDir }}/.volta"
