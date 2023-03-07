@@ -1,3 +1,4 @@
+command_timeout = 750
 scan_timeout = 10
 
 [directory]
@@ -30,7 +31,7 @@ style = "bold red"
 threshold = 10
 
 [custom.nodeYarn]
-command = "yarn -v"
+command = "volta list yarn --current --quiet --format plain | sd '^.*@' '' | sd ' .*' ''"
 files = ["yarn.lock"]
 symbol = "🧶"
 format = "[+ $symbol v$output]($style)"
@@ -43,7 +44,7 @@ shell = "zsh"
 style = "bold green"
 
 [custom.nodeNPM]
-command = "npm -v"
+command = "volta list npm --current --quiet --format plain | sd '^.*@' '' | sd ' .*' ''"
 files = ["package-lock.json"]
 symbol = ""
 format = "[+ $symbol v$output]($style)"
